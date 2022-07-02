@@ -16,14 +16,33 @@ function changeTheme() {
     }
 }
 
-function saveUserInput(){
-    let value = userInput.value;
+
+function convertNumber(){
+    let num = parseFloat(userInput.value);
+
+    let metersToFeet = (num * 3.280839895).toFixed(2);
+    let feetToMeters = (num * 0.3048).toFixed(2);
+
+    let litersToGallons = (num * 0.2641720524).toFixed(2);
+    let gallonsToLitters = (num * 3.785411784).toFixed(2);
+
+    let kilosToPounds = (num * 2.2046226218).toFixed(2);
+    let poundsToKilos = (num * 0.45359237).toFixed(2);
     
-    if(value.length !== 0){
+    if(userInput.value.length !== 0){
         for(let number of inputNumbers){ 
-            number.textContent = value;
+            number.textContent = userInput.value;
         }
-        convertValues(value);
+
+        document.getElementsByClassName("ft")[0].textContent = metersToFeet;
+        document.getElementsByClassName("m")[0].textContent = feetToMeters;
+
+        document.getElementsByClassName("gal")[0].textContent = litersToGallons;
+        document.getElementsByClassName("l")[0].textContent = gallonsToLitters;
+
+        document.getElementsByClassName("lbs")[0].textContent = kilosToPounds;
+        document.getElementsByClassName("kg")[0].textContent = poundsToKilos;
+
     } else {
         for(let result of results){
             result.textContent = "0.00";
@@ -31,32 +50,9 @@ function saveUserInput(){
         for(let number of inputNumbers){
             number.textContent = "0";
         }
-    }
-
-} 
-
-function convertValues(input) {
-    let num = parseFloat(input);
-    
-    let metersToFeet = (num * 3.280839895).toFixed(2);
-    document.getElementsByClassName("ft")[0].textContent = metersToFeet;
-    let feetToMeters = (num * 0.3048).toFixed(2);
-    document.getElementsByClassName("m")[0].textContent = feetToMeters;
-
-
-    let litersToGallons = (num * 0.2641720524).toFixed(2);
-    document.getElementsByClassName("gal")[0].textContent = litersToGallons;
-    let gallonsToLitters = (num * 3.785411784).toFixed(2);
-    document.getElementsByClassName("l")[0].textContent = gallonsToLitters;
-
-
-    let kilosToPounds = (num * 2.2046226218).toFixed(2);
-    document.getElementsByClassName("lbs")[0].textContent = kilosToPounds;
-    let poundsToKilos = (num * 0.45359237).toFixed(2);
-    document.getElementsByClassName("kg")[0].textContent = poundsToKilos;
+    } 
 }
 
-
-userInput.addEventListener("input", saveUserInput);
+userInput.addEventListener("input", convertNumber);
 moonIcon.addEventListener("click", changeTheme);
 sunIcon.addEventListener("click", changeTheme);
