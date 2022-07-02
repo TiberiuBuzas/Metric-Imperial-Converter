@@ -18,7 +18,7 @@ function changeTheme() {
 
 
 function convertNumber(){
-    let num = parseFloat(userInput.value);
+    let num = parseFloat(userInput.value); 
 
     let metersToFeet = (num * 3.280839895).toFixed(2);
     let feetToMeters = (num * 0.3048).toFixed(2);
