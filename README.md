@@ -1,4 +1,4 @@
-# MetricImperial-Converter
+# Metric/Imperial-Converter
 A Metric/Imperial Converter  built with HTML, CSS and JavaScript. Inspired by Scrimba.com.
 
 
