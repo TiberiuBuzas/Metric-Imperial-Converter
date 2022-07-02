@@ -1,0 +1,188 @@
+/*============================== Web Version (Big Screen) ============================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+*:focus{
+    outline: none;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    position: relative;
+}
+
+.ri-sun-line, .moon{
+    position: absolute;
+    font-size: 40px;
+    top: 50px;
+    right: 100px;
+}
+.ri-sun-line:hover, .moon:hover{
+    transform: scale(120%);
+    transition: .85s;
+    cursor: pointer;
+} 
+ 
+.centerBoard{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-board{
+    width: 650px;
+    height: 700px;
+    border-radius: 40px;
+    text-align: center;
+}
+
+.gradient-board{
+    position: relative;
+    width: 650px;
+    height: 245px;
+    border-radius: 40px 40px 0 0;
+    margin-bottom: 40px;
+    padding: 45px;
+} 
+
+h1{
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 25px;
+}
+
+h2{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 13px;
+}
+
+p{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 60px;
+}
+
+span{
+    font-weight: 500;
+    font-size: 20px;
+}
+
+#userInput{
+    font-size: 65px;
+    width: 100%;
+    background: transparent;
+    border: none;
+    text-align: center;
+}
+#userInput::placeholder{
+    font-size: 65px;
+} 
+
+
+/* Hide Arrows from Input Field type number */
+/* Chrome, Safari, Edge, Opera */
+#userInput::-webkit-outer-spin-button,
+#userInput::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Firefox */
+#userInput {
+    -moz-appearance: textfield;
+}
+
+
+
+ 
+
+/*============================== Mobile Version (Small Screen) ============================== */
+
+
+@media only screen and (max-width: 700px) {
+    body {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        position: relative;
+        width: 100vw;
+        height: 100vh;   
+    }
+     
+    h1{
+        font-weight: 900;
+        font-size: 30px;
+        margin-bottom: 80px;
+    }
+    
+    h2{
+        font-size: 20px;
+        margin-bottom: 13px;
+    }
+    
+    p{
+        font-size: 15px;
+        margin-bottom: 80px;
+    }
+    
+    #userInput{
+        font-size: 50px;
+        border: none;
+        text-align: center;
+        background-color: transparent;
+        margin-bottom: 60px;
+    }
+
+    #userInput::placeholder{
+        font-size: 50px;
+    } 
+    
+    span {
+        font-weight: 500;
+        font-size: 18px;
+    }
+    
+    
+    .gradient-board{
+        position: fixed;
+        top: 0%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        width: 100vw;
+        height: 35vh;
+    }
+    
+    .main-board{
+        padding-top: 100px;
+        position: absolute;
+        bottom: 0%;
+        border-radius: 50px;
+        height: 65vh;
+        width: 100vw;
+    }
+
+    /* .centerBoard{
+        width: 100vw;
+        height: 100vh;
+    } */
+    
+    .ri-sun-line, .moon{
+        position: absolute;
+        right: 45.8%; 
+        top: 92%;
+        font-size: 40px;
+    }
+    .ri-sun-line:hover, .moon:hover{
+        transition: .85s;
+        cursor: pointer;
+    }
+}
+

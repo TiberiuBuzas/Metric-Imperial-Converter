@@ -1,0 +1,78 @@
+/*================================= VARIABLES CSS =================================*/
+:root{
+
+    /* Light Theme */
+    --light-theme-background: rgba(162, 214, 249, 0.5);
+    --light-theme-gradient: linear-gradient(to right, #11296B, #1E96FC);
+    --light-theme-h1: #28AFFA;
+    --light-theme-h2: #11296B; /* also the color of the moon */
+    --light-theme-numbers:#FFDB57;
+    --light-theme-standard-font: #054A91;
+    --light-theme-board-background: #A2D6F9;
+    --light-theme-dropshadow: #28AFFA;
+    
+}
+
+/*============================== Web Version (Big Screen) ============================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+*:focus{
+    outline: none;
+}
+
+/*=============== Light Theme =============== */
+
+body{
+    background: var(--light-theme-background);
+}
+
+.moon{
+    color: var(--light-theme-h2);
+}
+ 
+.ri-sun-line{
+    display:none;
+}
+
+.main-board{
+    background-color: var(--light-theme-board-background);
+    box-shadow: 20px 25px 50px var(--light-theme-dropshadow);
+}
+
+h1{
+    color: var(--light-theme-h1);
+}
+
+h2{
+    color: var(--light-theme-h2);
+}
+
+p{
+    color: var(--light-theme-standard-font);
+}
+
+span{
+    color: var(--light-theme-numbers);
+}
+
+#userInput{
+    color: var(--light-theme-numbers);
+}
+#userInput::placeholder{
+    color: var(--light-theme-numbers);
+}
+
+.gradient-board{
+    background: var(--light-theme-gradient);
+}
+
+
+@media (max-width: 700px){
+    .main-board{
+        box-shadow: none;
+    }
+}

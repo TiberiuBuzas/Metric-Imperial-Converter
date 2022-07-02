@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,400;0,600;1,500&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+        <link href="darkThemeStyle.css" rel="stylesheet">
+    </head>
+    <body>
+        
+        
+        <div class="centerBoard">
+            <div class="main-board"> 
+                <div class="gradient-board">
+                    <h1>Metric/Imperial Converter</h1>
+                    <input type="number" pattern="[0-9]" id="userInput" placeholder="0">
+                </div>
+                <h2>Length (Meter/Feet)</h2>
+                <p><span class="inputNumber">0</span> meters = <span class="result ft">0.00</span> feet | <span class="inputNumber">0</span> feet = <span class="result m">0.00</span> meters</p>
+
+                <h2>Volume (Liters/Gallons)</h2>
+                <p><span class="inputNumber">0</span> liters = <span class="result gal">0.00</span> gallons | <span class="inputNumber">0</span> gallons = <span class="result l">0.00</span> liters</p>
+
+                <h2>Mass (Kilograms/Pounds)</h2>
+                <p><span class="inputNumber">0</span> kilos = <span class="result lbs">0.00</span> pounds | <span class="inputNumber">0</span> pounds = <span class="result kg">0.00</span> kilos</p>
+
+            </div>
+        </div>
+
+        <i class="ri-moon-fill moon" id="moon"></i>
+        <i class="ri-sun-line" id="sun"></i>
+
+        <script src="script.js"></script>
+    </body>
+</html>

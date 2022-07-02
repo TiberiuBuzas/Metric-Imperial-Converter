@@ -1,0 +1,72 @@
+/*================================= VARIABLES CSS =================================*/
+:root{
+
+    /* Dark Theme Colors */
+    --dark-theme-background:#11284B;
+    --dark-theme-gradient: linear-gradient(to right, #0EAE57, #0C7475);
+    --dark-theme-standard-font: #F7EDE2; /* also the color of the sun */
+    --dark-theme-h2: #08F58E;
+    --dark-theme-numbers: #61FF7E;
+    --dark-theme-board-background: #222725;
+    --dark-theme-dropshadow: #61FF7E;
+
+}
+
+/*============================== Web Version (Big Screen) ============================== */
+
+/*=============== Dark Theme =============== */
+
+body{
+    background: var(--dark-theme-background);
+}
+
+.ri-sun-line{
+    color: var(--dark-theme-standard-font);
+}
+
+.moon{
+    display: none;
+}
+
+
+.main-board{
+    background-color: var(--dark-theme-board-background);
+    box-shadow: 20px 25px 50px var(--dark-theme-dropshadow);
+}
+
+h1{
+    color: var(--dark-theme-standard-font);
+}
+
+h2{
+    color: var(--dark-theme-h2);
+}
+
+p{
+    color: var(--dark-theme-standard-font);
+}
+
+span{
+    color: var(--dark-theme-numbers);
+ 
+}
+
+#userInput{
+    color: var(--dark-theme-numbers);
+}
+#userInput::placeholder{
+    color: var(--dark-theme-numbers);
+}
+
+
+.gradient-board{
+    background: var(--dark-theme-gradient);
+} 
+
+@media (max-width: 700px){
+    .main-board{
+        box-shadow: none;
+    }
+} 
+
+
