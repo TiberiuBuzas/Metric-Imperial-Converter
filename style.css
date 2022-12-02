@@ -90,11 +90,13 @@ span{
 /* Chrome, Safari, Edge, Opera */
 #userInput::-webkit-outer-spin-button,
 #userInput::-webkit-inner-spin-button {
+    appearance: none;
     -webkit-appearance: none;
     margin: 0;
 }
 /* Firefox */
 #userInput {
+    appearance: textfield;
     -moz-appearance: textfield;
 }
 
